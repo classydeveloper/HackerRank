@@ -31,6 +31,13 @@ sourceSets {
         }
     }
 }
+
+test {
+    testLogging {
+        events "PASSED", "STARTED", "FAILED", "SKIPPED"
+    }
+}
+
 task execute(type:JavaExec) {
 
     main = 'com.algorithms.hackerrank.SimpleMath'

@@ -16,8 +16,11 @@ public class SimpleMathTest {
 
         Assert.assertTrue(10!=calc.add(5,4));
     }
-    public static void main(String[] args) {
+    @Test
+    public  void subtract() {
+        SimpleMath calc = new SimpleMath();
 
-
+        Assert.assertEquals(5,calc.subtract(10,5));
     }
+
 }

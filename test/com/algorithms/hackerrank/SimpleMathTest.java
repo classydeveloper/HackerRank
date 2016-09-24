@@ -23,4 +23,9 @@ public class SimpleMathTest {
         Assert.assertEquals(5,calc.subtract(10,5));
     }
 
+    @Test
+    public  void multiply() {
+        SimpleMath calc = new SimpleMath();
+        Assert.assertEquals(15,calc.multiply(5,3));
+    }
 }

@@ -1,0 +1,43 @@
+group 'com.algorithms.hackerrank'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.4'
+}
+
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/']
+
+        }
+        resources {
+            srcDirs = ['src/resources']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['test/']
+        }
+    }
+}
+task execute(type:JavaExec) {
+
+    main = 'com.algorithms.hackerrank.SimpleMath'
+    classpath = sourceSets.main.runtimeClasspath
+
+}
+
+task forceTest {
+    dependsOn "cleanTest", "test"
+}
